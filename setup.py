@@ -21,9 +21,9 @@ install_deps = [
     'peft',
     'lion-pytorch',
 ]
-tf_ver = '2.0.0a'
-if get_dist('tensorflow>='+tf_ver) is None and get_dist('tensorflow_gpu>='+tf_ver) is None:
-    install_deps.append('tensorflow>='+tf_ver)
+tf_ver = '2.16.1'
+#if get_dist('tensorflow>='+tf_ver) is None and get_dist('tensorflow_gpu>='+tf_ver) is None:
+install_deps.append('tensorflow='+tf_ver)
 
 setup(
   name = 'mitdeeplearning',         # How you named your package folder (MyLib)
